@@ -1,5 +1,12 @@
-# proyecto2022
-Estructura de Proyecto Lab de Compu II - 2022
+# My time at school
+Esta pagina corresponde a el juego My time at school MTAS
+ 
+## Autores
+* Planas Montilla, Santiago
+
+## Tecnologias Usadas
+* HTML5
+* CSS3
 
 ## Requisitos del Primer Parcial
 
@@ -25,8 +32,8 @@ Estructura de Proyecto Lab de Compu II - 2022
 - [X] Title debe contener el título de la página
 - [X] En el ```<head></head>``` incluir las etiquetas ```<meta>``` detallando: autor, descripcion y palabras clave
 - [X] Emplear al menos 3 etiquetas semánticas diferentes (header, nav, aside, section, article, footer)
-- [ ] Emplear ```<header></header>```. En el contenido de la cabecera debe haber un título ```<h1></h1>```, puede tener color de fondo, algún logotipo, etc.
-- [ ] Debe haber por lo menos una etiqueta ```<img>``` en la página.
+- [X] Emplear ```<header></header>```. En el contenido de la cabecera debe haber un título ```<h1></h1>```, puede tener color de fondo, algún logotipo, etc.
+- [X] Debe haber por lo menos una etiqueta ```<img>``` en la página.
 - [ ] La estructura de la página debe estar definida con ```<div></div>```
 - [ ] Debe contener al menos 3 elementos de tipo ```<input>``` o ```<select>``` ó ```<button>``` que le permitan al usuario ingresar valores para poder realizar un cálculo de un ejercicio.
 - [ ] Debe contener un ```<canvas>```, para que posteriormente (en la 2da etapa) se grafique alguna imagen representativa del ejercicio. (el desarrollo del gráfico se realizará cuando se vea la unidad de “Orientación a Eventos”)
