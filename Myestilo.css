@@ -45,17 +45,23 @@ Header {
 }
 
 .bot1 {
-    border: rgb(128, 128, 128) 1px dashed;
+    border: rgb(2, 0, 0) 1px dashed;
     font-size: 40pt;
     border-radius: 6px;
-    background-color: rgb(233, 233, 233)
+    background-color: rgb(19, 129, 24);
+}
+.bot1:hover{
+    background-color: #c50000;
 }
 
 .bot2 {
-    border: rgb(128, 128, 128) 1px dashed;
+    border: rgb(250, 248, 248) 1px dashed;
     font-size: 20pt;
     border-radius: 6px;
-    background-color: rgb(233, 233, 233)
+    background-color: rgb(3, 245, 219)
+}
+.bot2:hover{
+    background-color: #1a063b;
 }
 
 section {
