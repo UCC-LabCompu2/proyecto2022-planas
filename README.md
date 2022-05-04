@@ -22,8 +22,8 @@ Esta pagina corresponde a el juego My time at school MTAS
 - [X] La página principal debe llamarse index
 - [X] Identar correctamente el código (en Webstorm Ctrl+Alt+L)
 - [X] No debe haber errores presentes (realizar *Code* > *Inspect Code* para verificar que no haya errores)
-- [ ] Se debe emplear algún favicon
-- [ ] Emplear alguna fuente de google fonts o subir al proyecto alguna fuente externa
+- [X] Se debe emplear algún favicon
+- [X] Emplear alguna fuente de google fonts o subir al proyecto alguna fuente externa
 - [X] Debe haber navegación entre todas las páginas
 
 ### Sobre el HTML

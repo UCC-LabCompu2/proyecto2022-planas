@@ -6,7 +6,20 @@
 h1 {
     color: #04253d;
     flex-grow: 1;
+    font-size: 700%;
+    text-align: center;
+    font-family: 'Tapestry', cursive;
+}
+h2 {
+    color: #000000;
+    flex-grow: 1;
     font-size: xxx-large;
+    text-align: center;
+}
+h3{
+    color: #04263f;
+    flex-grow: 1;
+    font-size: x-large;
     text-align: center;
 }
 
