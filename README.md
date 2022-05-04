@@ -1,6 +1,9 @@
 # My time at school
 Esta pagina corresponde a el juego My time at school MTAS
  
+## Link del proyecto
+link del proyecto: [Proyecto-Planas](https://ucc-labcompu2.github.io/proyecto2022-planas/)
+
 ## Autores
 * Planas Montilla, Santiago
 
@@ -46,7 +49,7 @@ Esta pagina corresponde a el juego My time at school MTAS
 - [ ] El estilo de los elementos debe establecerse en un archivo CSS (prohibido poner el atributo style a los elementos o emplear estilos incrustados).
 - [ ] El CSS debe contar mínimo con un tipo de cada forma (por Tag, por ID y por clase).
 - [ ] Se debe emplear pseudoclase
-- [ ] No emplear !important
+- [x] No emplear !important
 
 ### Sobre Accesibilidad:
 - [X] Toda imagen debe tener su etiqueta alt
