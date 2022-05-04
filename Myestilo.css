@@ -24,7 +24,7 @@ h3{
 }
 
 img.logo {
-
+    margin: 10px;
 }
 
 Header {
@@ -47,12 +47,14 @@ Header {
 .bot1 {
     border: rgb(128, 128, 128) 1px dashed;
     font-size: 40pt;
+    border-radius: 6px;
     background-color: rgb(233, 233, 233)
 }
 
 .bot2 {
     border: rgb(128, 128, 128) 1px dashed;
     font-size: 20pt;
+    border-radius: 6px;
     background-color: rgb(233, 233, 233)
 }
 
