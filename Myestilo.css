@@ -43,6 +43,10 @@ Header {
     background-size: cover;
     background-color: #8c5512;
 }
+.cont {
+    padding-top: 10%;
+    padding-bottom: 15%;
+}
 
 .bot1 {
     border: rgb(2, 0, 0) 1px dashed;
