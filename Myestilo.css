@@ -75,35 +75,35 @@ Header {
 }
 
 .bot3 {
-    border: rgb(250, 248, 248) 1px dashed;
+    border: rgb(16, 11, 11) 1px dashed;
     font-size: 20pt;
     border-radius: 6px;
-    background-color: rgb(3, 245, 219)
+    background-color: rgb(7, 165, 59);
 }
 
 .bot3:hover {
-    background-color: #1a063b;
+    background-color: #046c5a;
 }
 
 .bot4 {
-    border: rgb(250, 248, 248) 1px dashed;
+    border: rgb(0, 0, 0) 1px dashed;
     font-size: 20pt;
     border-radius: 6px;
-    background-color: rgb(3, 245, 219)
+    background-color: rgb(202, 248, 136)
 }
 
 .bot4:hover {
-    background-color: #1a063b;
+    background-color: #968802;
 }
 .bot5 {
-    border: rgb(250, 248, 248) 1px dashed;
+    border: rgb(10, 10, 10) 1px dashed;
     font-size: 20pt;
     border-radius: 6px;
-    background-color: rgb(3, 245, 219)
+    background-color: rgb(109, 59, 203)
 }
 
 .bot5:hover {
-    background-color: #1a063b;
+    background-color: #452b79;
 }
 
 section {
