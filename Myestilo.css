@@ -10,13 +10,15 @@ h1 {
     text-align: center;
     font-family: 'Tapestry', cursive;
 }
+
 h2 {
     color: #000000;
     flex-grow: 1;
     font-size: xxx-large;
     text-align: center;
 }
-h3{
+
+h3 {
     color: #04263f;
     flex-grow: 1;
     font-size: x-large;
@@ -37,13 +39,14 @@ Header {
 }
 
 .main {
-    background-image: url(imagenes/fondo.jpg) ;
+    background-image: url(imagenes/fondo.jpg);
     width: 100%;
     height: 100%;
     position: absolute;
     background-size: cover;
     background-color: #8c5512;
 }
+
 .cont {
     padding-top: 10%;
     padding-bottom: 15%;
@@ -55,7 +58,8 @@ Header {
     border-radius: 6px;
     background-color: rgb(19, 129, 24);
 }
-.bot1:hover{
+
+.bot1:hover {
     background-color: #c50000;
 }
 
@@ -65,7 +69,40 @@ Header {
     border-radius: 6px;
     background-color: rgb(3, 245, 219)
 }
-.bot2:hover{
+
+.bot2:hover {
+    background-color: #1a063b;
+}
+
+.bot3 {
+    border: rgb(250, 248, 248) 1px dashed;
+    font-size: 20pt;
+    border-radius: 6px;
+    background-color: rgb(3, 245, 219)
+}
+
+.bot3:hover {
+    background-color: #1a063b;
+}
+
+.bot4 {
+    border: rgb(250, 248, 248) 1px dashed;
+    font-size: 20pt;
+    border-radius: 6px;
+    background-color: rgb(3, 245, 219)
+}
+
+.bot4:hover {
+    background-color: #1a063b;
+}
+.bot5 {
+    border: rgb(250, 248, 248) 1px dashed;
+    font-size: 20pt;
+    border-radius: 6px;
+    background-color: rgb(3, 245, 219)
+}
+
+.bot5:hover {
     background-color: #1a063b;
 }
 
@@ -83,4 +120,51 @@ footer {
     top: 100%;
     left: 100%;
     transform: translateX(-100%) translateY(-100%);
+}
+
+
+.juego {
+
+    width: 40%;
+    background-color: #f3dd4f;
+    position: absolute;
+    margin-top: 228px;
+    top: 0;
+    border-radius: 5px;
+}
+
+.recuadro {
+    color: #c50000;
+
+}
+
+#intro {
+    position: absolute;
+    left: 650px;
+    text-align: center;
+}
+
+#act {
+    text-align: center !important;
+}
+
+
+#nivel {
+    position: absolute;
+    top: 170px;
+    left: 650px;
+    float: left;
+    height: 50px;
+    text-align: center;
+    border-radius: 10px;
+    width: 15%;
+}
+
+#espacio {
+    margin: 140px 0 0 0;
+    padding-top: 160px;
+}
+
+#barra {
+    font-size: 20px;
 }
