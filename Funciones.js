@@ -22,15 +22,15 @@ function pasarFormulario() {
 
 }
 
-/**
+/*
  * Vuelve a la pagina principal.
  * Actualmente no funciona, por lo que se utiliza directamente por html
  * @method Returnindex
- */
+ *
 function Returnindex() {
     window.open("index.html", "_self");
 }
-
+*/
 //Variables
 let JVida = 10;
 let JD = 0;
@@ -87,7 +87,9 @@ function Descanso() {
  * @method AtaqueE
  */
 function AtaqueE() {
-
+    let A=4;
+    A-=JD;
+    JVida-=A;
     if (JVida <= 0) {
         alert("Perdiste, intentalo nuevamente");
         window.open("index.html", "_self");
@@ -95,6 +97,10 @@ function AtaqueE() {
 }
 
 window.onload = function () {
+    function animateprogress(s, XP) {
+        
+    }
+
     if (XP >= 100) {
         Nivel++;
         XP-=100;
