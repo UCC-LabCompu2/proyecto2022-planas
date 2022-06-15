@@ -25,6 +25,13 @@ h3 {
     text-align: center;
 }
 
+h4 {
+    color: #04263f;
+    flex-grow: 1;
+    font-size: medium;
+    text-align: center;
+}
+
 img.logo {
     margin: 10px;
 }
@@ -95,6 +102,7 @@ Header {
 .bot4:hover {
     background-color: #968802;
 }
+
 .bot5 {
     border: rgb(10, 10, 10) 1px dashed;
     font-size: 20pt;
