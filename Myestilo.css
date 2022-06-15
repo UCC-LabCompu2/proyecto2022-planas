@@ -163,10 +163,21 @@ footer {
 
 }
 
+#enemigo{
+    height: 300px;
+    position: absolute;
+    left: 650px;
+    text-align: center;
+}
+
 #intro {
     text-align: center !important;
 }
 
+#Jugador{
+    text-align: center !important;
+    height: 300px;
+}
 
 #nivel {
     position: absolute;
