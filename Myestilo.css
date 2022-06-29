@@ -195,6 +195,7 @@ footer {
     padding-top: 160px;
 }
 
-#barra {
-    font-size: 20px;
+#canvas_nivel{
+    background: linear-gradient(to right,white,lightskyblue);
+    border-radius: 10px;
 }

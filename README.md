@@ -10,6 +10,7 @@ link del proyecto: [Proyecto-Planas](https://ucc-labcompu2.github.io/proyecto202
 ## Tecnologias Usadas
 * HTML5
 * CSS3
+* JS
 
 ## Requisitos del Primer Parcial
 

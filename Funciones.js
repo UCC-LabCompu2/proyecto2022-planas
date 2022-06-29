@@ -26,11 +26,11 @@ function pasarFormulario() {
  * Vuelve a la pagina principal.
  * Actualmente no funciona, por lo que se utiliza directamente por html
  * @method Returnindex
- *
+ */
 function Returnindex() {
     window.open("index.html", "_self");
 }
-*/
+
 //Variables
 let JVida = 10;
 let JD = 0;
@@ -38,6 +38,8 @@ let JE = 2;
 let XP = 0;
 let Nivel = 1;
 let EVida = 15;
+document.getElementById("N").innerHTML = Nivel;
+
 
 /**
  * Genera la Accion Estudiar.
@@ -96,16 +98,54 @@ function AtaqueE() {
     }
 }
 
-window.onload = function () {
-    function animateprogress(s, XP) {
-        
-    }
+function dibujarExp(){
+    var canvas = document.getElementById("canvas_nivel");
+    var ctx = canvas.getContext("2d");
 
-    if (XP >= 100) {
-        Nivel++;
-        XP-=100;
-        animateprogress("#barra", XP);
-    } else {
-        animateprogress("#barra", XP);
+
+    var estrella = new Image();
+    estrella.src = "imagenes/Estrella.webp";
+    var Player = new Image();
+    player.src = "imagenes/PLEXP.png";
+
+
+    ctx.beginPath();
+    dino.onload = function(){
+        ctx.drawImage(Player,XP,10,20,20);
     }
+    estrella.onload = function(){
+        ctx.drawImage(estrella,190,10,20,20);
+    }
+    ctx.closePath();
+
+    ctx.beginPath()
+    ctx.lineWidth = 10;
+
+    ctx.beginPath();
+    ctx.moveTo(10, 10);
+    ctx.lineTo(10, 10);
+    ctx.stroke();
+
+    ctx.closePath();
 }
+/**
+ * La funcion anima al canvas en el que se grafica el progreso de exp que se tiene durante el juego.
+ * @method AnimarExp
+ */
+function AnimarExp() {
+    setInterval(dibujarExp,200);
+
+}
+
+/**
+ * Esta funcion sirve para obtener la informacion pasada a travez de la url
+ * @method obtenerFormulario
+ */
+function obtenerName() {
+    var nombre;
+
+    nombre= window.location.href.split('#')[1];
+
+    document.getElementById("Name").innerHTML = nombre;
+}
+

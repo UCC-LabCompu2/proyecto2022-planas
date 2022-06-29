@@ -8,11 +8,12 @@
     <meta content="Web del juego MTAS" name="descripcion">
     <meta content="jugar, creditos" name="palabras claves">
     <link rel="stylesheet" href="Myestilo.css" type="text/css">
+    <script type="text/javascript" src="Funciones.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tapestry&display=swap" rel="stylesheet">
 </head>
-<body class="main">
+<body onload="AnimarExp();obtenerName()" class="main">
 <header>
     <img class="logo" src="imagenes/logo_MTAS.png" alt="logo">
     <h1>My time at school</h1>
@@ -67,15 +68,17 @@
 
     <fieldset id="nivel" class="juego">
         <div class="recuadro">nivel</div>
-        <div id="N"></div>
-        <br>
-        <progress id="barra" max="100" value="0"></progress>
+        <div>
+            <p id="N"></p>
+        </div>
+        <BR>
+        <canvas height="20px" width="200" id="canvas_nivel"></canvas>
     </fieldset>
 </div>
 
 
 <footer>
-    <button class="bot2" onclick="location.href='index.html'">volver</button>
+    <button class="bot2" onclick="Returnindex()">volver</button>
 </footer>
 </body>
 </html>
