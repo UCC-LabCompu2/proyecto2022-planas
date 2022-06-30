@@ -18,6 +18,7 @@ function pasarFormulario() {
     if (pasar === 1) {
         urlComp = "juego.html#" + nombre;
         window.open(urlComp, "_self");
+        Nombre=document.getElementById("name").value;
     }
 
 }
@@ -39,7 +40,7 @@ let JE = 2;
 let XP = 0;
 let Nivel = 1;
 let EVida = 15;
-document.getElementById("Name").innerHTML += Nombre;
+
 
 
 
@@ -134,6 +135,18 @@ function dibujarExp(){
     }
     ctx.closePath();
 }
+
+/**
+ * Esta funcion sirve para obtener la informacion pasada a travez de la url
+ * @method obtenerFormulario
+ */
+function obtenerName() {
+    var nombre;
+
+    nombre= window.location.href.split('#')[1];
+    Nombre = nombre;
+}
+
 /**
  * La funcion anima al canvas en el que se grafica el progreso de exp que se tiene durante el juego, y carga nivel.
  * @method Animar
@@ -146,18 +159,15 @@ function AnimarJ1() {
 }
 
 function AnimarJ2() {
-    document.getElementById("VidaJ").innerHTML += JVida;
+    setInterval(J2,200);
+    document.getElementById("Name").innerHTML = Nombre;
+
+}
+function J2(){
+    document.getElementById("VidaJ").innerHTML = JVida;
+    document.getElementById("VidaE").innerHTML = EVida;
 
 }
 
-/**
- * Esta funcion sirve para obtener la informacion pasada a travez de la url
- * @method obtenerFormulario
- */
-function obtenerName() {
-    var nombre;
 
-    nombre= window.location.href.split('#')[1];
-    Nombre = nombre;
-}
 
