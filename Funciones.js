@@ -32,12 +32,14 @@ function Returnindex() {
 }
 
 //Variables
+let Nombre;
 let JVida = 10;
 let JD = 0;
 let JE = 2;
 let XP = 0;
 let Nivel = 1;
 let EVida = 15;
+document.getElementById("Name").innerHTML += Nombre;
 
 
 
@@ -72,7 +74,7 @@ function Repaso() {
     JD = 2;
     alert("Ataca el enemigo");
     AtaqueE();
-    JD=0
+    JD=0;
 }
 
 /**
@@ -93,6 +95,7 @@ function AtaqueE() {
     let A=4;
     A-=JD;
     JVida-=A;
+
     if (JVida <= 0) {
         alert("Perdiste, intentalo nuevamente");
         window.open("index.html", "_self");
@@ -107,37 +110,43 @@ function dibujarExp(){
     var estrella = new Image();
     estrella.src = "imagenes/Estrella.webp";
     var Player = new Image();
-    player.src = "imagenes/PLEXP.png";
+    Player.src = "imagenes/PLEXP.png";
 
 
-    ctx.beginPath();
-    Player.onload = function(){
-        ctx.drawImage(Player,XP+10,10,15,15);
-    }
-    estrella.onload = function(){
-        ctx.drawImage(estrella,190,10,15,15);
-    }
-    ctx.closePath();
+
 
     ctx.beginPath()
     ctx.lineWidth = 10;
 
     ctx.beginPath();
-    ctx.moveTo(10, 10);
-    ctx.lineTo(XP+100, 10);
+    ctx.moveTo(5, 20);
+    ctx.lineTo(XP+10, 20);
     ctx.stroke();
 
     ctx.closePath();
+
+    ctx.beginPath();
+    Player.onload = function(){
+        ctx.drawImage(Player,XP+10,10,20,20);
+    }
+    estrella.onload = function(){
+        ctx.drawImage(estrella,180,10,20,20);
+    }
+    ctx.closePath();
 }
 /**
- * La funcion anima al canvas en el que se grafica el progreso de exp que se tiene durante el juego.
- * @method AnimarExp
+ * La funcion anima al canvas en el que se grafica el progreso de exp que se tiene durante el juego, y carga nivel.
+ * @method Animar
  */
-function Animar() {
+function AnimarJ1() {
     setInterval(dibujarExp,200);
     document.getElementById("N").innerHTML += Nivel;
-    document.getElementById("VidaJ").innerHTML += JVida;
 
+
+}
+
+function AnimarJ2() {
+    document.getElementById("VidaJ").innerHTML += JVida;
 
 }
 
@@ -149,7 +158,6 @@ function obtenerName() {
     var nombre;
 
     nombre= window.location.href.split('#')[1];
-
-    document.getElementById("Name").innerHTML = nombre;
+    Nombre = nombre;
 }
 
