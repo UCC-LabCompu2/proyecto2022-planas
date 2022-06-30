@@ -49,18 +49,20 @@ let EVida = 15;
  * @method Estudio
  */
 function Estudio() {
-    let A = 3;
+    let A=3;
     let V=EVida;
     if (JE>0){
-        V -= A;
-        if (V <= 0) {
+        V-=A;
+        if (EVida<=0) {
             alert("Ganaste, sigue en el camino de conocimiento");
             XP+=20;
         }else{
+            EVida-=A;
+            JE-=1;
             alert("Ataca el enemigo");
             AtaqueE();
-            Evida=V;
-            JE-=1;
+
+
         }
     }else{
         alert("No tienes la energia suficiente")
