@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tapestry&display=swap" rel="stylesheet">
 </head>
-<body onload="obtenerName()" class="main">
+<body onload="obtenerName();Animar()" class="main">
 <header>
     <img class="logo" src="imagenes/logo_MTAS.png" alt="logo">
     <h1>My time at school</h1>
@@ -26,6 +26,9 @@
 
         <div class="recuadro">Jugador
               <p id="Name"></p>
+            <p id="VidaJ"> Vida:</p>
+
+
         </div>
 
 
@@ -33,6 +36,9 @@
     <fieldset id="enemigo" class="juego">
 
         <div class="recuadro">Enemigo</div>
+        <p> Vida:
+            <span id="VidaE"></span>
+        </p>
 
         <BR>
     </fieldset>

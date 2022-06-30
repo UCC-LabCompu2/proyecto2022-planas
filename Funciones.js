@@ -38,7 +38,7 @@ let JE = 2;
 let XP = 0;
 let Nivel = 1;
 let EVida = 15;
-document.getElementById("N").innerHTML = Nivel;
+
 
 
 /**
@@ -57,6 +57,7 @@ function Estudio() {
             alert("Ataca el enemigo");
             AtaqueE();
             Evida=V;
+            JE-=1;
         }
     }else{
         alert("No tienes la energia suficiente")
@@ -110,11 +111,11 @@ function dibujarExp(){
 
 
     ctx.beginPath();
-    dino.onload = function(){
-        ctx.drawImage(Player,XP,10,20,20);
+    Player.onload = function(){
+        ctx.drawImage(Player,XP+10,10,15,15);
     }
     estrella.onload = function(){
-        ctx.drawImage(estrella,190,10,20,20);
+        ctx.drawImage(estrella,190,10,15,15);
     }
     ctx.closePath();
 
@@ -123,7 +124,7 @@ function dibujarExp(){
 
     ctx.beginPath();
     ctx.moveTo(10, 10);
-    ctx.lineTo(10, 10);
+    ctx.lineTo(XP+100, 10);
     ctx.stroke();
 
     ctx.closePath();
@@ -132,8 +133,11 @@ function dibujarExp(){
  * La funcion anima al canvas en el que se grafica el progreso de exp que se tiene durante el juego.
  * @method AnimarExp
  */
-function AnimarExp() {
+function Animar() {
     setInterval(dibujarExp,200);
+    document.getElementById("N").innerHTML += Nivel;
+    document.getElementById("VidaJ").innerHTML += JVida;
+
 
 }
 
