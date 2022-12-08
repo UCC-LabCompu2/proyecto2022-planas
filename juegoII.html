@@ -27,7 +27,9 @@
         <div class="recuadro">Jugador
             <p id="nombre1"></p>
             <img id="IMGJ" class="IMGJ" src="imagenes/JUG.png" alt="JIMG">
+
             <p>Vida: <span id="VidaJ"></span></p>
+            <canvas height="26" width="204" id="canvas_VidaJ"></canvas>
             <p>Defensa: <span id="DefJ"></span></p>
             <p>Energia: <span id="ENJ"></span></p>
 
@@ -39,13 +41,15 @@
     <fieldset id="enemigo" class="juego">
 
         <div class="recuadro">Enemigo</div>
-        <p>Vida: <span id="VidaE"></span></p>
         <img id="IMGEN" class="IMGE" src="imagenes/ENEMI.png" alt="ENIMG">
+        <p>Vida: <span id="VidaE"></span></p>
+        <canvas height="26" width="204" id="canvas_VidaE"></canvas>
 
         <BR>
     </fieldset>
 
     <fieldset id="nivel" class="juego">
+        <BR>
         <div>
             <button class="botA" onclick="Estudio()">
                 Estudio

@@ -46,6 +46,7 @@ let JE = 2;
 let XP = 0;
 let Nivel = 1;
 let EVida = 15;
+var id = null;
 
 //
 //var jugad = new person(hola,10,0,2)
@@ -59,6 +60,7 @@ function Estudio() {
     let A = 3;
     let V = EVida;
     if (JE > 0) {
+        alert("se ataco y realizo 3 de daño")
         V -= A;
         if (V <= 0) {
             alert("Ganaste, sigue en el camino de conocimiento");
@@ -105,6 +107,7 @@ function AtaqueE() {
     let A = 4;
     A -= JD;
     JVida -= A;
+    dibujarVIDA();
 
     if (JVida <= 0) {
         alert("Perdiste, intentalo nuevamente");
@@ -112,6 +115,11 @@ function AtaqueE() {
     }
 }
 
+
+/**
+ Canvas que dibuja la experiencia que se consigue en el juego, y su progreso.
+ @method dibujarExp
+ */
 function dibujarExp() {
     var canvas = document.getElementById("canvas_nivel");
     var ctx = canvas.getContext("2d");
@@ -143,10 +151,60 @@ function dibujarExp() {
     ctx.closePath();
 }
 
+/**
+ Canvas que dibuja la Vida de jugador y enemigo.
+ @method dibujarVIDA
+ */
+function dibujarVIDA() {
+    var canvas1 = document.getElementById("canvas_VidaJ");
+    var canvas2 = document.getElementById("canvas_VidaE");
+    var ctx1 = canvas1.getContext("2d");
+    var ctx2 = canvas2.getContext("2d");
+    VIDA1 = JVida;
+    VIDA2 = EVida;
+    VIDA1 *= 20;
+    VIDA2 *= (40 / 3);
+
+
+    ctx1.beginPath()
+    ctx1.lineWidth = 20;
+    ctx1.strokeStyle = '#000000';
+    ctx1.stroke();
+    ctx1.moveTo(2, 13);
+    ctx1.lineTo(202, 13);
+    ctx1.stroke();
+    ctx1.closePath();
+    ctx1.beginPath()
+    ctx1.lineWidth = 20;
+    ctx1.strokeStyle = '#FF0000';
+    ctx1.stroke();
+    ctx1.moveTo(2, 13);
+    ctx1.lineTo(VIDA1 + 2, 13);
+    ctx1.stroke();
+    ctx1.closePath();
+
+    ctx2.beginPath()
+    ctx2.lineWidth = 20;
+    ctx2.strokeStyle = '#000000';
+    ctx2.stroke();
+    ctx2.moveTo(2, 13);
+    ctx2.lineTo(202, 13);
+    ctx2.stroke();
+    ctx2.closePath();
+    ctx2.beginPath()
+    ctx2.lineWidth = 20;
+    ctx2.strokeStyle = '#FF0000';
+    ctx2.stroke();
+    ctx2.moveTo(2, 13);
+    ctx2.lineTo(VIDA2 + 2, 13);
+    ctx2.stroke();
+    ctx2.closePath();
+}
+
 
 /**
- * La funcion anima al canvas en el que se grafica el progreso de exp que se tiene durante el juego, y carga nivel.
- * @method Animar
+ * La funcion anima al canvas en el que se grafica el progreso de exp que se tiene durante el juego, y carga nivel ademas de l nombre.
+ * @method AnimarJ1
  */
 function AnimarJ1() {
     document.getElementById("nombre1").innerHTML = Nombre;
@@ -158,6 +216,7 @@ function AnimarJ1() {
 
 function AnimarJ2() {
     setInterval(J2, 200);
+    dibujarVIDA();
 }
 
 function J2() {
@@ -169,16 +228,5 @@ function J2() {
 
 
 }
-
-
-/*no se usa
-function person(NOM, VI, DEF, EN) {
-    this.NOM = NOM;
-    this.VI = VI;
-    this.DEF = DEF;
-    this.EN = EN;
-}
-
-*/
 
 

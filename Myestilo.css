@@ -159,10 +159,12 @@ footer {
 }
 
 .IMGJ {
+    position: static;
     height: 150px;
     width: 170px;
 
 }
+
 
 #act {
     background-image: url(imagenes/FondIconos.png);
@@ -211,4 +213,13 @@ footer {
 #canvas_nivel {
     background: linear-gradient(to right, white, lightskyblue);
     border-radius: 10px;
+}
+
+#canvas_VidaE{
+    background: #046c5a;
+    border-radius: 5px;
+}
+#canvas_VidaJ{
+    background: #6d3bcb;
+    border-radius: 5px;
 }
