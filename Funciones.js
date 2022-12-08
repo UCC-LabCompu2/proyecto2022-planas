@@ -18,7 +18,7 @@ function pasarFormulario() {
     if (pasar === 1) {
         urlComp = "juego.html#" + nombre;
         window.open(urlComp, "_self");
-        Nombre=document.getElementById("name").value;
+        Nombre = document.getElementById("name").value;
         localStorage.setItem("ELNOM", nombre);
     }
 
@@ -51,30 +51,27 @@ let EVida = 15;
 //var jugad = new person(hola,10,0,2)
 
 
-
-
-
 /**
  * Genera la Accion Estudiar.
  * @method Estudio
  */
 function Estudio() {
-    let A=3;
-    let V=EVida;
-    if (JE>0){
-        V-=A;
-        if (V<=0) {
+    let A = 3;
+    let V = EVida;
+    if (JE > 0) {
+        V -= A;
+        if (V <= 0) {
             alert("Ganaste, sigue en el camino de conocimiento");
-            XP+=20;
-        }else{
-            EVida-=A;
-            JE-=1;
+            XP += 20;
+        } else {
+            EVida -= A;
+            JE -= 1;
             alert("Ataca el enemigo");
             AtaqueE();
 
 
         }
-    }else{
+    } else {
         alert("No tienes la energia suficiente")
     }
 }
@@ -87,7 +84,7 @@ function Repaso() {
     JD = 2;
     alert("Ataca el enemigo");
     AtaqueE();
-    JD=0;
+    JD = 0;
 }
 
 /**
@@ -105,9 +102,9 @@ function Descanso() {
  * @method AtaqueE
  */
 function AtaqueE() {
-    let A=4;
-    A-=JD;
-    JVida-=A;
+    let A = 4;
+    A -= JD;
+    JVida -= A;
 
     if (JVida <= 0) {
         alert("Perdiste, intentalo nuevamente");
@@ -115,7 +112,7 @@ function AtaqueE() {
     }
 }
 
-function dibujarExp(){
+function dibujarExp() {
     var canvas = document.getElementById("canvas_nivel");
     var ctx = canvas.getContext("2d");
 
@@ -126,28 +123,25 @@ function dibujarExp(){
     Player.src = "imagenes/PLEXP.png";
 
 
-
-
     ctx.beginPath()
     ctx.lineWidth = 10;
 
     ctx.beginPath();
     ctx.moveTo(5, 20);
-    ctx.lineTo(XP+10, 20);
+    ctx.lineTo(XP + 10, 20);
     ctx.stroke();
 
     ctx.closePath();
 
     ctx.beginPath();
-    Player.onload = function(){
-        ctx.drawImage(Player,XP+10,10,20,20);
+    Player.onload = function () {
+        ctx.drawImage(Player, XP + 10, 10, 20, 20);
     }
-    estrella.onload = function(){
-        ctx.drawImage(estrella,180,10,20,20);
+    estrella.onload = function () {
+        ctx.drawImage(estrella, 180, 10, 20, 20);
     }
     ctx.closePath();
 }
-
 
 
 /**
@@ -156,16 +150,17 @@ function dibujarExp(){
  */
 function AnimarJ1() {
     document.getElementById("nombre1").innerHTML = Nombre;
-    setInterval(dibujarExp,200);
+    setInterval(dibujarExp, 200);
     document.getElementById("N").innerHTML += Nivel;
 
 
 }
 
 function AnimarJ2() {
-    setInterval(J2,200);
+    setInterval(J2, 200);
 }
-function J2(){
+
+function J2() {
     document.getElementById("VidaJ").innerHTML = JVida;
     document.getElementById("VidaE").innerHTML = EVida;
     document.getElementById("DefJ").innerHTML = JD;
