@@ -151,6 +151,19 @@ footer {
 
 }
 
+.IMGE{
+    height: 150px;
+    width: 170px;
+    transform: scaleX(-1);
+
+}
+
+.IMGJ{
+    height: 150px;
+    width: 170px;
+
+}
+
 #act {
     background-image: url(imagenes/FondIconos.png);
     background-size: auto;
