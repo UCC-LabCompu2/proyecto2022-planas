@@ -47,6 +47,7 @@ let XP = 0;
 let Nivel = 1;
 let EVida = 15;
 var id = null;
+var mov=10;
 
 //
 //var jugad = new person(hola,10,0,2)
@@ -217,6 +218,7 @@ function AnimarJ1() {
 function AnimarJ2() {
     setInterval(J2, 200);
     dibujarVIDA();
+    setInterval(dibujarANIM,500);
 }
 
 function J2() {
@@ -225,8 +227,40 @@ function J2() {
     document.getElementById("DefJ").innerHTML = JD;
     document.getElementById("ENJ").innerHTML = JE;
     document.getElementById("nombre1").innerHTML = Nombre;
+}
+
+function dibujarANIM() {
+    var canvas = document.getElementById("canvas_Animada");
+    var ctx = canvas.getContext("2d");
+
+    var Player = new Image();
+    Player.src = "imagenes/progres.png";
+
+    ctx.beginPath()
+    ctx.lineWidth = 50;
+    ctx.strokeStyle = '#ffffff';
+    ctx.stroke();
+    ctx.moveTo(0, 25);
+    ctx.lineTo(400, 25);
+    ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.strokeStyle = '#000000';
+    Player.onload = function () {
+        ctx.drawImage(Player,mov, 0, 50, 50);
+    }
+
+    mov+=10;
+
+    if(mov>390){
+        mov=0;
+    }
+    ctx.closePath();
+
 
 
 }
+
 
 

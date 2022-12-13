@@ -194,6 +194,15 @@ footer {
     height: 300px;
 }
 
+#canvas_Animada{
+    position: absolute;
+    top: 330px;
+    left: 70px;
+    float: right;
+    height: 50px;
+    border-radius: 10px;
+}
+
 #nivel {
     position: absolute;
     top: 330px;
