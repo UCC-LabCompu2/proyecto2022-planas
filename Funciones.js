@@ -215,12 +215,20 @@ function AnimarJ1() {
 
 }
 
+/**
+ Funcion que anima la pagina.
+ @method AnimarJ2
+ */
 function AnimarJ2() {
     setInterval(J2, 200);
     dibujarVIDA();
     setInterval(dibujarANIM,500);
 }
 
+/**
+ acortar codigo de AnimarJ2.
+ @method J2
+ */
 function J2() {
     document.getElementById("VidaJ").innerHTML = JVida;
     document.getElementById("VidaE").innerHTML = EVida;
@@ -229,6 +237,10 @@ function J2() {
     document.getElementById("nombre1").innerHTML = Nombre;
 }
 
+/**
+ Canvas que dibuja y anima un dibujo en la pantalla de juego.
+ @method dibujarANIM
+ */
 function dibujarANIM() {
     var canvas = document.getElementById("canvas_Animada");
     var ctx = canvas.getContext("2d");
@@ -261,6 +273,3 @@ function dibujarANIM() {
 
 
 }
-
-
-
